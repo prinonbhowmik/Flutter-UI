@@ -36,85 +36,97 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
           child: Column(
             children: [
-              const SizedBox(
-                height: 40,
-              ),
-              Center(
-                child: Container(
-                  height: 200,
-                  child: Image.asset("images/cleaning.png"),
-                ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              const Text(
-                "Your house",
-                style: TextStyle(
-                  fontFamily: "Segoe UI",
-                  fontWeight: FontWeight.w700,
-                  fontSize: 30,
-                  color: Color(0xfffbfbfb),
-                ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              const Text(
-                "cleaning service",
-                style: TextStyle(
-                  fontFamily: "Segoe UI",
-                  fontWeight: FontWeight.w700,
-                  fontSize: 30,
-                  color: Color(0xfffbfbfb),
-                ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              const Text(
-                "24/7",
-                style: TextStyle(
-                  fontFamily: "Segoe UI",
-                  fontWeight: FontWeight.w700,
-                  fontSize: 30,
-                  color: Color(0xfffbfbfb),
+              Expanded(
+                flex: 4,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Center(
+                      child: Container(
+                        height: 200,
+                        child: Image.asset("images/cleaning.png"),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    const Text(
+                      "Your house",
+                      style: TextStyle(
+                        fontFamily: "Segoe UI",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 30,
+                        color: Color(0xfffbfbfb),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      "cleaning service",
+                      style: TextStyle(
+                        fontFamily: "Segoe UI",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 30,
+                        color: Color(0xfffbfbfb),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      "24/7",
+                      style: TextStyle(
+                        fontFamily: "Segoe UI",
+                        fontWeight: FontWeight.w400,
+                        fontSize: 30,
+                        color: Color(0xfffbfbfb),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Expanded(
-                child: Align(
-                  alignment: FractionalOffset.bottomCenter,
-                  child: Container(
-                    height: 40.00,
-                    width: 154.00,
-                    decoration: BoxDecoration(
-                      color: Color(0xffff9b04),
-                      border: Border.all(
-                        width: 1.00,
-                        color: Color(0xff707070),
+                flex: 1,
+                  child: Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: Container(
+                      height: 40.00,
+                      width: 154.00,
+                      decoration: BoxDecoration(
+                        color: Color(0xffff9b04),
+                        border: Border.all(
+                          width: 1.00,
+                          color: Color(0xff707070),
+                        ),
+                        borderRadius: BorderRadius.circular(10.00),
                       ),
-                      borderRadius: BorderRadius.circular(10.00),
-                    ),
-                    child: Center(
-                      child: MaterialButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Second()));
-                        },
-                        child: const Text(
-                          "Go",
-                          style: TextStyle(
-                            fontFamily: "Segoe UI",fontWeight: FontWeight.w400,
-                            fontSize: 33,
-                            color:Color(0xffffffff),
+                      child: Center(
+                        child: MaterialButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Second()));
+                          },
+                          child: const Text(
+                            "Go",
+                            style: TextStyle(
+                              fontFamily: "Segoe UI",fontWeight: FontWeight.w400,
+                              fontSize: 25,
+                              color:Color(0xffffffff),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
+              const SizedBox(
+                height: 30,
               ),
             ],
           ),
