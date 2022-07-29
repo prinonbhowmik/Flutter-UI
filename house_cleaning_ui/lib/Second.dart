@@ -12,6 +12,7 @@ class Second extends StatefulWidget {
 class _SecondState extends State<Second> {
   int bedCounter = 1;
   int bathCounter = 1;
+  var dayList = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
   void _incrementBed() {
     setState(() {
@@ -101,7 +102,7 @@ class _SecondState extends State<Second> {
                 ],
               ),
               const SizedBox(
-                height: 50,
+                height: 35,
               ),
               Neumorphic(
                 style: const NeumorphicStyle(
@@ -255,8 +256,8 @@ class _SecondState extends State<Second> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         GestureDetector(
-                          onTap: (){
-                            if(bathCounter>0){
+                          onTap: () {
+                            if (bathCounter > 0) {
                               _decrementBath();
                             }
                           },
@@ -280,7 +281,7 @@ class _SecondState extends State<Second> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             _incrementBath();
                           },
                           child: const Text(
@@ -298,7 +299,9 @@ class _SecondState extends State<Second> {
                   ),
                 ],
               ),
-              SizedBox(height: 30,),
+              const SizedBox(
+                height: 30,
+              ),
               Container(
                 decoration: const BoxDecoration(
                   color: Color(0xff14433e),
@@ -308,9 +311,326 @@ class _SecondState extends State<Second> {
                   ),
                 ),
                 child: Column(
-                  
+                  children: [
+                    Container(
+                      height: 150,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Color(0xff14433e),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30.00),
+                          topRight: Radius.circular(30.00),
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.all(15.0),
+                            child: Text(
+                              "Day",
+                              style: TextStyle(
+                                fontFamily: "Segoe UI",
+                                fontWeight: FontWeight.w700,
+                                fontSize: 22,
+                                color: Color(0xffffffff),
+                              ),
+                            ),
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "2",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "3",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "4",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "5",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "6",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "7",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "8",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Container(
+                                    height: 34.00,
+                                    width: 36.00,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1.00,
+                                        color: Color(0xff707070),
+                                      ),
+                                      borderRadius:
+                                      BorderRadius.circular(20.00),
+                                    ),
+                                    child: const Center(
+                                      child:  Text(
+                                        "9",
+                                        style: TextStyle(
+                                          fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                          fontSize: 20,
+                                          color:Color(0xffffffff),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 154.00,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffff9b04),borderRadius: BorderRadius.only(topLeft: Radius.circular(30.00), topRight: Radius.circular(30.00), ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          const Padding(
+                            padding: EdgeInsets.all(15.0),
+                            child: Text(
+                              "Time",
+                              style: TextStyle(
+                                fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                fontSize: 25,
+                                color:Color(0xffffffff),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 31.00,
+                                  width: 62.00,
+                                  decoration: BoxDecoration(
+
+                                    border: Border.all(width: 1.00, color: Color(0xffffffff),), borderRadius: BorderRadius.circular(30.00),
+
+                                  ),
+                                  child: const Center(
+                                    child: Text(
+                                      "10:00",
+                                      style: TextStyle(
+                                        fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                        fontSize: 15,
+                                        color:Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 10,),
+
+                                Text(
+                                  "-",
+                                  style: TextStyle(
+                                    fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                    fontSize: 15,
+                                    color:Color(0xffffffff),
+                                  ),
+                                ),
+
+                                SizedBox(width: 10,),
+                                Container(
+                                  height: 31.00,
+                                  width: 62.00,
+                                  decoration: BoxDecoration(
+
+                                    border: Border.all(width: 1.00, color: Color(0xffffffff),), borderRadius: BorderRadius.circular(30.00),
+
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      "12:00",
+                                      style: TextStyle(
+                                        fontFamily: "Segoe UI",fontWeight: FontWeight.w700,
+                                        fontSize: 15,
+                                        color:Color(0xffffffff),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 ),
-              )
+              ),
             ],
           ),
         ),
